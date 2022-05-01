@@ -14,7 +14,7 @@ public class JoyController : Controller,IDragHandler,IEndDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        moveDir = Vector3.ClampMagnitude((Vector3)eventData.position - initJoyPos, 45);
+        moveDir = Vector3.ClampMagnitude((Vector3)eventData.position - initJoyPos, 25);
         transform.position = moveDir + initJoyPos;
     }
     public void OnEndDrag(PointerEventData eventData)
